@@ -5,7 +5,6 @@ myApp.controller('AppCtrl', ['$scope', '$http', function($scope, $http) {
     
     console.log('Hello from controller');
 //giving the endpoint
-
 	const refresh = function() { //wrapping to refresh?
     $http.get('/contactlist').then(function(response) {
     	console.log('I got the data I requested.');
@@ -53,7 +52,7 @@ myApp.controller('AppCtrl', ['$scope', '$http', function($scope, $http) {
 		$scope.contact = null;
 	}
     
-// //placeholder data (now located in server.js)
+// //placeholder data (now fetched from server.js via get method)
 //     let person1 = {
 //     	name: 'Tim',
 //     	email: 'tim@email1.com',
